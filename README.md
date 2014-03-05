@@ -33,7 +33,7 @@ or check out all the red and black cards from Shadowmoor?
                  orderby c.Name
                  select c).ToList();
                  
-in fact that last query highlights an important part of LinqToGatherer. Compare that list to what is returned within the Gatherer website itself and you'll notice a single card is missing: Reaper King.
+In fact that last query highlights an important part of LinqToGatherer. Compare that list to what is returned within the Gatherer website itself and you'll notice a single card is missing: Reaper King.
 
 ## .NET is still in play
 
