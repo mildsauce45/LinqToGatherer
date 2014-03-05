@@ -37,7 +37,7 @@ namespace LinqToGatherer
                 return null;
 
             if (!enumType.IsEnum)
-                throw new ArgumentException(string.Format("The type {0} is not an enum.", enumType.Name));
+                throw new ArgumentException(string.Format("The type {0} is not an enum.", enumType.Name)); 
 
             var fields = from field in enumType.GetFields() where field.IsLiteral select field;
 
