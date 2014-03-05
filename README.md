@@ -3,7 +3,7 @@ LinqToGatherer
 
 A Linq Query Provider for the Magic: The Gathering Gatherer Database
 
-Have you ever wanted to search some database for a bunch of magic cards fitting some criteria? Come on, of course you have. Well LtG provides the mechanisms to do so without having to maintain your own local database and keep it up to date. We lean on the public face of Gatherer.
+Have you ever wanted to search some database for a bunch of magic cards fitting some criteria? Come on, of course you have. LtG provides the mechanisms to do so without having to maintain your own local database and keep it up to date. It leans on the public face of Gatherer.
 
 #Querying for Cards
 
@@ -11,7 +11,7 @@ Cards are the primary model in LtG. Simply build up a query against the Cards qu
 
 ## You MUST provide a where clause
 
-Gatherer is a public website, but I'd still like to be a good internet citizen and not constantly request every card from the beginning of time before filtering down further.
+Gatherer is a public website, but I'd like to be a good internet citizen and not constantly request every card from the beginning of time before filtering down further.
 
 Would you like to know how many Clerics there are in the game?
 
@@ -33,11 +33,11 @@ or check out all the red and black cards from Shadowmoor?
                  orderby c.Name
                  select c).ToList();
                  
-In fact that last query highlights an important part of LinqToGatherer. Compare that list to what is returned within the Gatherer website itself and you'll notice a single card is missing: Reaper King.
+In fact, that last query highlights an important part of LinqToGatherer. Compare that list to what is returned within the Gatherer website itself and you'll notice a single card is missing: Reaper King.
 
 ## .NET is still in play
 
-The problem with the above query is that Reaper King isn't only red and black...it's every color and that query was looking for cards that are exactly red and black. This is the most important caveat to keep in mind when formulating your queries.
+The problem with the above query is that Reaper King isn't only red and black, it's every color and that query was looking for cards that are exactly red and black. This is the most important caveat to keep in mind when formulating your queries.
 
 #Other Queryables
 
@@ -57,7 +57,7 @@ The only other remarkable thing about Sets is that the Sets queryable is the onl
     
 ##Card Images
 
-You can also download the bytes for a specific card image. In order to do this though you need to supply the MultiverseId of the image you'd like to download. Any Cards query will give you the MultiverseId of a card or maybe you know it already from Gatherer. Again, since I'd like to be a good internet citizen, these images are cached for the lifetime of your process, so extra queries for the same Multiverse Id don't go over the internet.
+You can also download the bytes for a specific card image. In order to do this you need to supply the MultiverseId of the image you'd like to download. Any Cards query will give you the MultiverseId of a card or maybe you know it already from Gatherer. Again, since I'd like to be a good internet citizen, these images are cached for the lifetime of your process, so extra queries for the same MultiverseId don't go over the internet.
 
     var ids = new List<int> { 600, 601 };
     var imgs = from ci in Gatherer.CardImages
