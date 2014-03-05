@@ -11,7 +11,7 @@ Cards are the primary model in LtG. Simply build up a query against the Cards qu
 
 ## You MUST provide a where clause
 
-Gatherer is a public website, but I'd still like to be a good internet citizen and constantly request every card from the beginning of time before filtering down further.
+Gatherer is a public website, but I'd still like to be a good internet citizen and not constantly request every card from the beginning of time before filtering down further.
 
 Would you like to know how many Clerics there are in the game?
 
