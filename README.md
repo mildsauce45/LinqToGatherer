@@ -20,13 +20,13 @@ Would you like to know how many Clerics there are in the game?
                  orderby c.Name
                  select c).ToList();
                  
-or maybe how many mythics there are in the latest set
+or maybe how many mythics there are in the latest set?
 
     var numCards = (from c in Gatherer.Cards
                     where c.Rarity == Rarity.Mythic && c.Set == "Born of the Gods"
                     select c).Count();
                     
-or check out all the red and black cards from Shadowmoor
+or check out all the red and black cards from Shadowmoor?
 
     var cards = (from c in Gatherer.Cards
                  where c.Color == (Color.Red | Color.Black) && c.Set == "Shadowmoor"
